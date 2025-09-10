@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <style>
+        body {
+            background-color: rgb(237, 235, 223);
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+
+        div {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .shoptitleholder {
+            background-color: rgb(112, 120, 130);
+            padding-top: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        h1 {
+            color:rgb(237, 235, 223);
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .narrow {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .smalllogo {
+            width: 30px;
+        }
+
+        table {
+            color: rgb(48, 45, 42);
+            width: 100%;
+            text-align: justify;
+            background-color: rgb(246, 245, 239);
+            padding: 40px;
+            border-radius: 20px;
+            border: 5px solid rgb(48, 45, 42);
+        }
+
+        th {
+            font-family:"Montserrat", sans-serif;
+            font-weight: 500;
+        }
+
+        td {
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+        }
+
+        p {
+            color: rgb(48, 45, 42);
+        }
+
+        #ownersname {
+            color: rgb(246, 245, 239);
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+
+        #yearestablished {
+            color: rgb(246, 245, 239);
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: 10px;
+            margin-top: 0px;
+            letter-spacing: 5px;
+        }
+
+        .businesshoursstyle {
+            background-color: rgb(112, 120, 130);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .businesshoursstyle p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: rgb(246, 245, 239);
+        }
+
+        #commonallergens {
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            margin-top: 0px;
+            letter-spacing: 3px;
+        }
+
+        .footer {
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: 10px;
+            margin-top: 0px;
+            letter-spacing: 5px;
+        }
+
+        #taxrate, #deliverystatus {
+            font-family:"Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            margin-top: 0px;
+            letter-spacing: 2px;
+        }
+    </style>
+
+    <title>Q1 SW2</title>
+</head>
+<body>
+
+    <div class="narrow">
+
+    <!-- Header. Shop title, logo, owner, and year. -->
+    <div class="shoptitleholder"><img class="logo" src="https://i.ibb.co/zdWDDkX/Untitled210-20250910191538.png"><h1 id="shoptitle"></h1><p id="ownersname"></p><p id="yearestablished"></p></div>
+
+        <br><br>
+
+    <!-- Website content -->
+    <div>
+
+        <!-- Menu pricelist. Price and product. -->
+        <div> 
+            <!-- Delivery status. -->
+            <p id="deliverystatus"></p>
+            <p style="margin-bottom: 3px; margin-top: 0px; letter-spacing: 5px;">MENU PRICELIST </p>
+            <!-- Tax rate. -->
+            <p id="taxrate"></p>
+            
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price ( ₱ )</th>
+                </tr>
+                <tr>
+                    <td id="Ice_cream_product"></td>
+                    <td id="Ice_cream_price"></td>
+                </tr>
+                <tr>
+                    <td id="Cake_product"></td>
+                    <td id="Cake_price"></td>
+                </tr>
+                <tr>
+                    <td id="Milkshake_product"></td>
+                    <td id="Milkshake_price"></td>
+                </tr>
+                <tr>
+                    <td id="Yogurt_product"></td>
+                    <td id="Yogurt_price"></td>
+                </tr>
+                <tr>
+                    <td id="Pudding_product"></td>
+                    <td id="Pudding_price"></td>
+                </tr>
+            </table>
+        </div>
+        <br><p id="commonallergens"></p>
+
+        <br><br>
+        
+        <!-- Business hours. -->
+         <div class="businesshoursstyle"><img class="smalllogo" src="https://i.ibb.co/HT8BKpbY/Untitled210-20250910210247.png"><p id="businesshours"></p></div>
+    </div>
+
+    <br><br>
+
+    <div class="footer">
+        <p>Ivy Zosa | 10 Topaz</p>
+    </div>
+
+    </div>
+    
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
